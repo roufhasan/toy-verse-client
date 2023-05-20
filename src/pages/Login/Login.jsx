@@ -3,6 +3,14 @@ import { FaGoogle } from "react-icons/fa";
 import loginImg from "../../assets/img/login-vector.jpg";
 
 const Login = () => {
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+  };
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row">
@@ -12,7 +20,7 @@ const Login = () => {
         <div className="card flex-shrink-0 w-full max-w-sm h-[700px]">
           <div className="card-body">
             <h2 className="text-3xl font-medium">Sign In</h2>
-            <form>
+            <form onSubmit={handleLogin}>
               <div className="form-control">
                 <label className="label">
                   <span className="text-lg font-medium">Email</span>
@@ -20,6 +28,7 @@ const Login = () => {
                 <input
                   type="email"
                   placeholder="Email"
+                  name="email"
                   className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded"
                 />
               </div>
@@ -30,6 +39,7 @@ const Login = () => {
                 <input
                   type="password"
                   placeholder="Password"
+                  name="password"
                   className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded"
                 />
                 <label className="label">
@@ -39,9 +49,11 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-blue-500 border-0 hover:bg-yellow-400 hover:text-black">
-                  Login
-                </button>
+                <input
+                  type="submit"
+                  value="Log In"
+                  className="btn bg-blue-500 border-0 hover:bg-yellow-400 hover:text-black"
+                />
               </div>
             </form>
             <div className="divider mt-6">OR</div>
