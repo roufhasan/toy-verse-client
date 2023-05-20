@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import signupImg from "../../assets/img/signup-vector.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+
   const handleSignUp = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -11,6 +15,16 @@ const Register = () => {
     const password = form.password.value;
     const photoURL = form.photURL.value;
     console.log(name, email, password, photoURL);
+
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    form.reset();
   };
   return (
     <div className="hero min-h-screen">

@@ -1,8 +1,20 @@
 import { Link } from "react-router-dom";
 import { HiOutlineKey } from "react-icons/hi2";
 import logo from "../../../assets/logo/toy-verse-logo.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        console.log("log out succesfully done");
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
       <div>
@@ -86,22 +98,26 @@ const Navbar = () => {
                 All Toys
               </Link>
             </li>
-            <li>
-              <Link
-                to="/"
-                className="text-lg font-semibold border-b-transparent border-b-2 hover:bg-white hover:border-b-yellow-500 hover:border-b-2 hover:scale-125"
-              >
-                My Toys
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                className="text-lg font-semibold border-b-transparent border-b-2 hover:bg-white hover:border-b-yellow-500 hover:border-b-2 hover:scale-125"
-              >
-                Add A Toy
-              </Link>
-            </li>
+            {user && (
+              <>
+                <li>
+                  <Link
+                    to="/"
+                    className="text-lg font-semibold border-b-transparent border-b-2 hover:bg-white hover:border-b-yellow-500 hover:border-b-2 hover:scale-125"
+                  >
+                    My Toys
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="text-lg font-semibold border-b-transparent border-b-2 hover:bg-white hover:border-b-yellow-500 hover:border-b-2 hover:scale-125"
+                  >
+                    Add A Toy
+                  </Link>
+                </li>
+              </>
+            )}
             <li>
               <Link
                 to="/"
@@ -112,13 +128,32 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <Link
-            to="/login"
-            className="flex items-center gap-3 text-xl font-semibold border-blue-500 border-2 bg-yellow-400 px-4 py-1 hover:scale-110"
-          >
-            Login <HiOutlineKey></HiOutlineKey>
-          </Link>
+        <div className="navbar-end flex-grow">
+          {user && (
+            <div
+              className="avatar tooltip tooltip-bottom mr-4"
+              data-tip={user?.displayName}
+            >
+              <div className="w-12 rounded-full">
+                <img src={user?.photoURL} />
+              </div>
+            </div>
+          )}
+          {user?.email ? (
+            <button
+              onClick={handleLogOut}
+              className="flex items-center gap-3 text-xl font-semibold rounded bg-yellow-400 px-4 py-1 hover:scale-110"
+            >
+              Log Out <HiOutlineKey></HiOutlineKey>
+            </button>
+          ) : (
+            <Link
+              to="/login"
+              className="flex items-center gap-3 text-xl font-semibold rounded bg-yellow-400 px-4 py-1 hover:scale-110"
+            >
+              Log In <HiOutlineKey></HiOutlineKey>
+            </Link>
+          )}
         </div>
       </div>
     </div>

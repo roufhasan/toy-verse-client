@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import loginImg from "../../assets/img/login-vector.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
+  const { signIn, signInWithGoogle } = useContext(AuthContext);
+
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -10,7 +14,29 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    form.reset();
   };
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((errror) => {
+        console.log(errror);
+      });
+  };
+
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row">
@@ -57,7 +83,10 @@ const Login = () => {
               </div>
             </form>
             <div className="divider mt-6">OR</div>
-            <button className="flex items-center justify-center gap-2 bg-[#e75447] hover:bg-[#ea4335] text-white py-2 px-8 rounded mt-6">
+            <button
+              onClick={handleGoogleLogin}
+              className="flex items-center justify-center gap-2 bg-[#e75447] hover:bg-[#ea4335] text-white py-2 px-8 rounded mt-6"
+            >
               <FaGoogle></FaGoogle> Log In With Google
             </button>
             <div className="text-center mt-4">
