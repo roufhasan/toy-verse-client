@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { HiOutlineKey } from "react-icons/hi2";
+import { FaDoorOpen } from "react-icons/fa";
 import logo from "../../../assets/logo/toy-verse-logo.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
@@ -142,14 +143,14 @@ const Navbar = () => {
           {user?.email ? (
             <button
               onClick={handleLogOut}
-              className="flex items-center gap-3 text-xl font-semibold rounded bg-yellow-400 px-4 py-1 hover:scale-110"
+              className="flex items-center gap-3 text-xl font-semibold rounded bg-yellow-400 px-4 py-1 hover:bg-yellow-500"
             >
-              Log Out <HiOutlineKey></HiOutlineKey>
+              Log Out <FaDoorOpen />
             </button>
           ) : (
             <Link
               to="/login"
-              className="flex items-center gap-3 text-xl font-semibold rounded bg-yellow-400 px-4 py-1 hover:scale-110"
+              className="flex items-center gap-3 text-xl font-semibold rounded bg-yellow-400 px-4 py-1 hover:bg-yellow-500"
             >
               Log In <HiOutlineKey></HiOutlineKey>
             </Link>
