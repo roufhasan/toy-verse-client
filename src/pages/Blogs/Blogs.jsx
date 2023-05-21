@@ -1,6 +1,6 @@
 const Blogs = () => {
   return (
-    <div>
+    <div className="space-y-6 h-screen pt-20 mb-20">
       <div
         tabIndex={0}
         className="collapse collapse-arrow border border-base-300 bg-yellow-100 rounded-lg"
@@ -151,6 +151,35 @@ const Blogs = () => {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        tabIndex={3}
+        className="collapse collapse-arrow border border-base-300 bg-blue-100 rounded-box"
+      >
+        <div className="collapse-title text-xl font-medium">
+          What is MongoDB aggregate and how does it work?
+        </div>
+        <div className="collapse-content">
+          <p className="my-6 text-lg">
+            In MongoDB, the aggregate function is used to perform advanced data
+            processing and analysis operations on the data stored in a
+            collection.
+          </p>
+          <p className="text-lg">
+            <span className="font-semibold">Working Method:</span> The MongoDB
+            aggregate function works by processing data through a series of
+            stages defined in an aggregation pipeline. Each stage operates on
+            the data and passes the transformed output to the next stage in the
+            pipeline. <br />
+            The aggregate function in MongoDB processes data through a series of
+            stages defined in an aggregation pipeline. Each stage operates on
+            the data, passing the transformed output to the next stage. This
+            allows for complex data manipulations and analysis, generating
+            customized results. The pipeline is executed sequentially on the
+            server, and the resulting output is returned as a cursor for further
+            processing.
+          </p>
         </div>
       </div>
     </div>
