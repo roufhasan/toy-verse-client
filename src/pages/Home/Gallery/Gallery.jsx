@@ -2,7 +2,7 @@ const Gallery = () => {
   return (
     <div className="mt-32">
       <div className="mb-12">
-        <h2 className="text-4xl text-center font-semibold mb-2">
+        <h2 className="text-4xl text-center font-semibold mb-6">
           Our Latest Toys Gallery
         </h2>
         <div className="flex justify-center">
