@@ -121,7 +121,7 @@ const Navbar = () => {
             )}
             <li>
               <Link
-                to="/"
+                to="/blogs"
                 className="text-lg font-semibold border-b-transparent border-b-2 hover:bg-white hover:border-b-yellow-500 hover:border-b-2 hover:scale-125"
               >
                 Blogs
