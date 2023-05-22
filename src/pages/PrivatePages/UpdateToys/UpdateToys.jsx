@@ -24,7 +24,7 @@ const UpdateToys = () => {
     };
     console.log(UpdateToy);
 
-    fetch(`http://localhost:5000/toy/${_id}`, {
+    fetch(`https://toy-verse-server-roan.vercel.app/toy/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
