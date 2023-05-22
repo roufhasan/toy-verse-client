@@ -93,7 +93,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/"
+                to="/allToys"
                 className="text-lg font-semibold border-b-transparent border-b-2 hover:bg-white hover:border-b-yellow-500 hover:border-b-2 hover:scale-125"
               >
                 All Toys
