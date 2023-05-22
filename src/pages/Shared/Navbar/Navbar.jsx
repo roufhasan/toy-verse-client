@@ -76,9 +76,9 @@ const Navbar = () => {
           </div>
           <Link
             to="/"
-            className="btn btn-ghost normal-case text-3xl text-blue-500 font-bold border-b-8 hover:bg-white hover:scale-125"
+            className="btn btn-ghost normal-case hidden lg:block text-3xl text-blue-500 font-bold border-b-8 hover:bg-white hover:scale-125"
           >
-            <span className="text-yellow-400 mr-1">Toy</span>Verse
+            <span className="text-yellow-400 lg:mr-1">Toy</span>Verse
           </Link>
         </div>
         <div className="hidden lg:flex">
@@ -150,7 +150,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="flex items-center gap-3 text-xl font-semibold rounded bg-yellow-400 px-4 py-1 hover:bg-yellow-500"
+              className="flex items-center lg:gap-3 text-lg lg:text-xl font-semibold rounded bg-yellow-400 px-4 py-1 hover:bg-yellow-500"
             >
               Log In <HiOutlineKey></HiOutlineKey>
             </Link>

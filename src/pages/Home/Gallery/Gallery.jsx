@@ -1,6 +1,6 @@
 const Gallery = () => {
   return (
-    <div className="mt-32">
+    <div className="mt-40">
       <div className="mb-12">
         <h2 className="text-4xl text-center font-semibold mb-6">
           Our Latest Toys Gallery

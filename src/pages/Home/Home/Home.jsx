@@ -1,6 +1,7 @@
 import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
 import Gallery from "../Gallery/Gallery";
+import NewsLetter from "../NewsLetter/NewsLetter";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner></Banner>
       <Gallery></Gallery>
       <AboutUs></AboutUs>
+      <NewsLetter></NewsLetter>
     </div>
   );
 };
