@@ -12,7 +12,7 @@ const AddToys = () => {
     const photoURL = form.photoURL.value;
     const name = form.name.value;
     const sellerName = form.sellerName.value;
-    const sellerEmail = form.user?.email;
+    const email = user?.email;
     const subCategory = form.subCategory.value;
     const price = form.price.value;
     const rating = form.rating.value;
@@ -23,7 +23,7 @@ const AddToys = () => {
       photoURL,
       name,
       sellerName,
-      sellerEmail,
+      email,
       subCategory,
       price,
       rating,
@@ -42,6 +42,10 @@ const AddToys = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data.insertedId) {
+          alert("service booked successfully");
+          form.reset();
+        }
       });
   };
 
