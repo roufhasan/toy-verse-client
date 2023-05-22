@@ -3,7 +3,7 @@ const NewsLetter = () => {
     <div className="my-40">
       <div className="mb-12">
         <h2 className="text-4xl text-center font-semibold mb-6">
-          Let's Stay Connected
+          Let&apos;s Stay Connected
         </h2>
         <div className="flex justify-center">
           <div className="border-2 border-yellow-400 w-48"></div>
