@@ -1,4 +1,5 @@
 import { HiOutlinePencilAlt, HiOutlineX } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MyToysRow = ({ myToy }) => {
@@ -33,7 +34,7 @@ const MyToysRow = ({ myToy }) => {
           .then((data) => {
             console.log(data);
             if (data.deletedCount > 0) {
-              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              Swal.fire("Deleted!", "Your toy has been deleted.", "success");
             }
           });
       }
@@ -62,9 +63,9 @@ const MyToysRow = ({ myToy }) => {
       <td>{quantity}</td>
       <td>{details.slice(0, 20)}</td>
       <td>
-        <button>
+        <Link to={`/update/${_id}`}>
           <HiOutlinePencilAlt></HiOutlinePencilAlt>
-        </button>
+        </Link>
       </td>
       <td>
         <button onClick={() => handleDelete(_id)}>
