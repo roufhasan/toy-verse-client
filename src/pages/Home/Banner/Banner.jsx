@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bannerBg from "../../../assets/img/banner-bg.jpg";
 
 const Banner = () => {
@@ -23,7 +24,9 @@ const Banner = () => {
           Get Up To <span className="text-yellow-400">30% Off</span> Available
         </h4>
         <div>
-          <button className="btn btn-warning">Shop Now</button>
+          <Link to="/allToys" className="btn btn-warning">
+            Shop Now
+          </Link>
         </div>
       </div>
     </div>

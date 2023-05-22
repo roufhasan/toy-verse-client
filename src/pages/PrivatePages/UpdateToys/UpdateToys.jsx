@@ -1,9 +1,11 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateToys = () => {
   const toy = useLoaderData();
   const { price, quantity, details, _id } = toy;
+
+  const navigate = useNavigate();
 
   const handleUpdateToy = (event) => {
     event.preventDefault();
@@ -41,6 +43,7 @@ const UpdateToys = () => {
             timer: 1500,
           });
           form.reset();
+          navigate("/myToys");
         }
       });
   };

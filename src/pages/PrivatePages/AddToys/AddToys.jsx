@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddToys = () => {
   const { user } = useContext(AuthContext);
-  console.log(user);
 
   const handleAddToy = (event) => {
     event.preventDefault();
@@ -43,7 +43,13 @@ const AddToys = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          alert("service booked successfully");
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "New Toy Have Been Added",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           form.reset();
         }
       });

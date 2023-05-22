@@ -18,18 +18,18 @@ const MyToys = () => {
     <div className="mt-12">
       <h2 className="text-3xl font-semibold text-center mb-8">My Toys List</h2>
       <div className="overflow-x-auto w-full">
-        <table className="table w-full">
+        <table className="table table-zebra w-full">
           {/* head */}
           <thead>
             <tr>
               <th>Name</th>
-              <th>Sub Category</th>
-              <th>Seller Name</th>
-              <th>Email</th>
               <th>Price</th>
               <th>Rating</th>
               <th>Quantity</th>
+              <th>Sub Category</th>
               <th>Details</th>
+              <th>Seller</th>
+              <th>Email</th>
               <th>Update</th>
               <th>Delete</th>
             </tr>

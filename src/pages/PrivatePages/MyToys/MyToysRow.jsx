@@ -24,7 +24,7 @@ const MyToysRow = ({ myToy }) => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Delete This Toy!",
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(`http://localhost:5000/mytoys/${id}`, {
@@ -32,7 +32,6 @@ const MyToysRow = ({ myToy }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your toy has been deleted.", "success");
             }
@@ -55,21 +54,21 @@ const MyToysRow = ({ myToy }) => {
           </div>
         </div>
       </td>
-      <td>{subCategory.toUpperCase()}</td>
-      <td>{sellerName}</td>
-      <td>{email}</td>
-      <td>{price}</td>
+      <td>${price}</td>
       <td>{rating}</td>
       <td>{quantity}</td>
-      <td>{details.slice(0, 20)}</td>
+      <td>{subCategory.toUpperCase()}</td>
+      <td>{details.slice(0, 20)}...</td>
+      <td>{sellerName}</td>
+      <td>{email}</td>
       <td>
         <Link to={`/update/${_id}`}>
-          <HiOutlinePencilAlt></HiOutlinePencilAlt>
+          <HiOutlinePencilAlt className="font-bold text-2xl text-blue-500"></HiOutlinePencilAlt>
         </Link>
       </td>
       <td>
         <button onClick={() => handleDelete(_id)}>
-          <HiOutlineX></HiOutlineX>
+          <HiOutlineX className="font-bold text-2xl text-red-500"></HiOutlineX>
         </button>
       </td>
     </tr>

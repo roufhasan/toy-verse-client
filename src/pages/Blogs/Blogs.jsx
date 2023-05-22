@@ -46,7 +46,7 @@ const Blogs = () => {
       </div>
       <div
         tabIndex={1}
-        className="collapse collapse-arrow border border-base-300 bg-blue-100 rounded-box"
+        className="collapse collapse-arrow border border-base-300 bg-blue-100 rounded-lg"
       >
         <div className="collapse-title text-xl font-medium">
           Compare SQL and NoSQL databases?
@@ -58,7 +58,7 @@ const Blogs = () => {
             database:
           </p>
           <div className="overflow-x-auto">
-            <table className="table w-full">
+            <table className="table table-zebra w-full">
               {/* head */}
               <thead>
                 <tr>
@@ -120,7 +120,7 @@ const Blogs = () => {
       </div>
       <div
         tabIndex={2}
-        className="collapse collapse-arrow border border-base-300 bg-yellow-100 rounded-box"
+        className="collapse collapse-arrow border border-base-300 bg-yellow-100 rounded-lg"
       >
         <div className="collapse-title text-xl font-medium">
           What is express js? What is Nest JS?
@@ -155,7 +155,7 @@ const Blogs = () => {
       </div>
       <div
         tabIndex={3}
-        className="collapse collapse-arrow border border-base-300 bg-blue-100 rounded-box"
+        className="collapse collapse-arrow border border-base-300 bg-blue-100 rounded-lg"
       >
         <div className="collapse-title text-xl font-medium">
           What is MongoDB aggregate and how does it work?
