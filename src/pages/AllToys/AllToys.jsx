@@ -1,15 +1,9 @@
-import { useEffect, useState } from "react";
 import AllToysRow from "./AllToysRow";
+import { useLoaderData } from "react-router-dom";
 
 const AllToys = () => {
-  const [toys, setToys] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:5000/allToys")
-      .then((res) => res.json())
-      .then((data) => {
-        setToys(data);
-      });
-  }, []);
+  const toys = useLoaderData();
+
   return (
     <div className="mt-12">
       <h2 className="text-3xl font-semibold text-center mb-8">All Toys List</h2>

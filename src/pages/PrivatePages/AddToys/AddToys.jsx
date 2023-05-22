@@ -149,7 +149,7 @@ const AddToys = () => {
             >
               <option value="marvel">Marvel</option>
               <option value="dc">DC</option>
-              <option value="Anime">Anime</option>
+              <option value="anime">Anime</option>
             </select>
           </div>
           <div className="form-control col-span-6">
