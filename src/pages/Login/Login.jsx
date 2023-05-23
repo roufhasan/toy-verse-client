@@ -1,11 +1,13 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import loginImg from "../../assets/img/login-vector.jpg";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const { signIn, signInWithGoogle } = useContext(AuthContext);
+
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -17,17 +19,20 @@ const Login = () => {
 
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
 
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
         form.reset();
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.log(error);
+        if (error.message == "Firebase: Error (auth/user-not-found).") {
+          setError("Wrong Email Addedress");
+        } else if (error.message == "Firebase: Error (auth/wrong-password).") {
+          setError("Wrong Password");
+        }
+        setError(error.message);
       });
   };
 
@@ -35,7 +40,7 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        navigate(from, { replace: true });
       })
       .catch((errror) => {
         console.log(errror);
@@ -87,7 +92,12 @@ const Login = () => {
                 />
               </div>
             </form>
-            <div className="divider mt-6">OR</div>
+            <div>
+              <p className="text-red-500 text-center">
+                <small>{error}</small>
+              </p>
+              <div className="divider mt-6">OR</div>
+            </div>
             <button
               onClick={handleGoogleLogin}
               className="flex items-center justify-center gap-2 bg-[#e75447] hover:bg-[#ea4335] text-white py-2 px-8 rounded mt-6"
