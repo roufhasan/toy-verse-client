@@ -7,7 +7,7 @@ const CategoryCard = ({ toy }) => {
   return (
     <div className="max-w-sm md:w-96 bg-base-100 shadow-xl rounded-none">
       <figure>
-        <img src={photoURL} alt="Shoes" />
+        <img src={photoURL} alt={name} className="h-96 object-cover" />
       </figure>
       <div className="space-y-4">
         <h2 className="text-2xl font-semibold text-center tracking-wider mt-6">

@@ -59,7 +59,7 @@ const MyToysRow = ({ myToy, index }) => {
       <td>{rating}</td>
       <td>{quantity}</td>
       <td>{subCategory.toUpperCase()}</td>
-      <td>{details.slice(0, 20)}...</td>
+      <td>{details.slice(0, 13)}...</td>
       <td>{sellerName}</td>
       <td>{email}</td>
       <td>
