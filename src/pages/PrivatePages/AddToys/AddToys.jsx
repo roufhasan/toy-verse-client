@@ -18,7 +18,7 @@ const AddToys = () => {
     const sellerName = form.sellerName.value;
     const email = user?.email;
     const subCategory = form.subCategory.value;
-    const price = form.price.value;
+    const price = parseFloat(form.price.value);
     const rating = form.rating.value;
     const quantity = form.quantity.value;
     const details = form.details.value;
@@ -44,7 +44,6 @@ const AddToys = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           Swal.fire({
             position: "center",

@@ -14,7 +14,7 @@ const MyToys = () => {
       .then((data) => {
         setMyToys(data);
       });
-  }, []);
+  }, [user?.email]);
 
   return (
     <div className="mt-12">

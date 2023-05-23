@@ -1,6 +1,6 @@
 const NewsLetter = () => {
   return (
-    <div className="my-40">
+    <div className="my-48">
       <div className="mb-12">
         <h2 className="text-4xl text-center font-semibold mb-6">
           Let&apos;s Stay Connected
