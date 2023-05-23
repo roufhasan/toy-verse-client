@@ -63,7 +63,7 @@ const AddToys = () => {
           onSubmit={handleAddToy}
           className="grid grid-cols-6 gap-x-4 gap-y-8"
         >
-          <div className="form-control col-span-3">
+          <div className="form-control col-span-6 md:col-span-3">
             <label className="label">
               <span className="label-text">Seller Name</span>
             </label>
@@ -76,7 +76,7 @@ const AddToys = () => {
               className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded bg-yellow-100"
             />
           </div>
-          <div className="form-control col-span-3">
+          <div className="form-control col-span-6 md:col-span-3">
             <label className="label">
               <span className="label-text">Seller Email</span>
             </label>
@@ -89,7 +89,7 @@ const AddToys = () => {
               className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded bg-yellow-100"
             />
           </div>
-          <div className="form-control col-span-2">
+          <div className="form-control col-span-3 md:col-span-2">
             <label className="label">
               <span className="label-text">Photo URL</span>
             </label>
@@ -100,7 +100,7 @@ const AddToys = () => {
               className="pl-4 h-12 focus:outline-blue-500 focus:bg-blue-100  border-gray-600 border rounded"
             />
           </div>
-          <div className="form-control col-span-2">
+          <div className="form-control col-span-3 md:col-span-2">
             <label className="label">
               <span className="label-text">Product Name</span>
             </label>
@@ -111,7 +111,7 @@ const AddToys = () => {
               className="pl-4 h-12 focus:outline-blue-500 focus:bg-blue-100  border-gray-600 border rounded"
             />
           </div>
-          <div className="form-control col-span-2">
+          <div className="form-control col-span-3 md:col-span-2">
             <label className="label">
               <span className="label-text">Price</span>
             </label>
@@ -123,7 +123,7 @@ const AddToys = () => {
             />
           </div>
 
-          <div className="form-control col-span-2">
+          <div className="form-control col-span-3 md:col-span-2">
             <label className="label">
               <span className="label-text">Rating</span>
             </label>
@@ -134,7 +134,7 @@ const AddToys = () => {
               className="pl-4 h-12 focus:outline-blue-500 focus:bg-blue-100  border-gray-600 border rounded"
             />
           </div>
-          <div className="form-control col-span-2">
+          <div className="form-control col-span-3 md:col-span-2">
             <label className="label">
               <span className="label-text">Available quantity</span>
             </label>
@@ -145,7 +145,7 @@ const AddToys = () => {
               className="pl-4 h-12 focus:outline-blue-500 focus:bg-blue-100  border-gray-600 border rounded"
             />
           </div>
-          <div className="form-control col-span-2">
+          <div className="form-control col-span-3 md:col-span-2">
             <label className="label">
               <span className="label-text">Category</span>
             </label>
