@@ -45,7 +45,7 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch((errror) => {
-        console.log(errror);
+        setError(errror);
       });
   };
 

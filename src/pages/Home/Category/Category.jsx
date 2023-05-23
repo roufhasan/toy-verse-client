@@ -16,7 +16,6 @@ const Category = () => {
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
-    console.log(tabName);
   };
 
   return (

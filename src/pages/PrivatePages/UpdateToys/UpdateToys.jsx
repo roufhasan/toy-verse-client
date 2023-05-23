@@ -24,7 +24,6 @@ const UpdateToys = () => {
       quantity,
       details,
     };
-    console.log(UpdateToy);
 
     fetch(`https://toy-verse-server-roan.vercel.app/toy/${_id}`, {
       method: "PUT",
@@ -35,7 +34,6 @@ const UpdateToys = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.modifiedCount > 0) {
           Swal.fire({
             position: "center",

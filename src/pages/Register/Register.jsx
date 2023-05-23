@@ -32,7 +32,7 @@ const Register = () => {
         navigate("/");
       })
       .catch((error) => {
-        console.log(error.message);
+        setError(error.message);
       });
     form.reset();
   };
