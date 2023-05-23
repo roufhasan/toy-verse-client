@@ -15,13 +15,12 @@ const AboutUs = () => {
               About Us
             </h1>
             <p className="font-normal text-base leading-6 text-gray-600 ">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum.In the first place we have granted to
-              God, and by this our present charter confirmed for us and our
-              heirs forever that the English Church shall be free, and shall
-              have her rights entire, and her liberties inviolate; and we will
-              that it be thus observed; which is apparent from
+              Welcome to Toy Verse, your ultimate destination for all things
+              play and imagination! We are a premier online toy store dedicated
+              to bringing joy, wonder, and endless entertainment to children of
+              all ages. With our vast selection of high-quality toys, games, and
+              collectibles, we strive to make every playtime a memorable and
+              enriching experience.
             </p>
           </div>
           <div className="w-full lg:w-8/12 ">

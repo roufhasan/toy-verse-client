@@ -18,11 +18,11 @@ const ToyDetails = () => {
   const ratingNum = Number(rating);
 
   return (
-    <div className="mt-12 bg-[#F9DBBD] pt-[6%] rounded-lg">
+    <div className="mt-12 bg-cyan-200 pt-[6%] rounded-lg">
       <h1 className="text-4xl font-bold text-center pb-16 border-b-2 border-black">
-        Toy Details
+        Toy Detail&apos;s
       </h1>
-      <div className="md:grid gap-12 grid-cols-6 bg-[#F9DBBD] p-[2%] rounded-lg">
+      <div className="md:grid gap-12 grid-cols-6 bg-cyan-100 p-[2%] rounded-bl-lg rounded-br-lg">
         <h2 className="text-2xl font-bold col-span-6">{name}</h2>
         <div className="col-span-2">
           <img src={photoURL} alt="" className="object-contain rounded-md" />

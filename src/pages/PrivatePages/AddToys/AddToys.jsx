@@ -56,8 +56,8 @@ const AddToys = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-4xl font-semibold text-center">Add New Toy</h1>
+    <div className="mt-12">
+      <h2 className="text-3xl font-semibold text-center mb-8">Add New Toy</h2>
       <div>
         <form
           onSubmit={handleAddToy}
