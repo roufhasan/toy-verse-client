@@ -2,7 +2,7 @@ import { HiOutlinePencilAlt, HiOutlineX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const MyToysRow = ({ myToy }) => {
+const MyToysRow = ({ myToy, index }) => {
   const {
     photoURL,
     name,
@@ -42,6 +42,7 @@ const MyToysRow = ({ myToy }) => {
 
   return (
     <tr>
+      <td>{index + 1}.</td>
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">

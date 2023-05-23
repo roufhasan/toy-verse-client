@@ -2,9 +2,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import useTitle from "../../../titleHook/useTitle";
+import { useNavigate } from "react-router-dom";
 
 const AddToys = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
   useTitle("Add Toy");
 
   const handleAddToy = (event) => {
@@ -32,7 +34,6 @@ const AddToys = () => {
       quantity,
       details,
     };
-    console.log(addedToy);
 
     fetch("https://toy-verse-server-roan.vercel.app/addToy", {
       method: "POST",
@@ -53,6 +54,7 @@ const AddToys = () => {
             timer: 1500,
           });
           form.reset();
+          navigate("/myToys");
         }
       });
   };

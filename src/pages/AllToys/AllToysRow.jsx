@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
-const AllToysRow = ({ toy }) => {
+const AllToysRow = ({ toy, index }) => {
   const { sellerName, name, subCategory, price, quantity, _id } = toy;
   return (
     <tr>
-      <td>1</td>
+      <td>{index + 1}</td>
       <td>{sellerName}</td>
       <td>{name}</td>
       <td>{subCategory.toUpperCase()}</td>

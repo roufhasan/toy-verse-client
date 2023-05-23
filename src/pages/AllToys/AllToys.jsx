@@ -24,8 +24,8 @@ const AllToys = () => {
             </tr>
           </thead>
           <tbody>
-            {toys.slice(0, 20).map((toy) => (
-              <AllToysRow key={toy._id} toy={toy}></AllToysRow>
+            {toys.map((toy, index) => (
+              <AllToysRow key={toy._id} toy={toy} index={index}></AllToysRow>
             ))}
           </tbody>
         </table>
