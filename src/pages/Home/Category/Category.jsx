@@ -58,7 +58,7 @@ const Category = () => {
         </a>
       </div>
 
-      <div className="flex gap-x-4 gap-y-12 flex-col md:flex-row justify-center bg-yellow-50 pb-[3%] pt-[5%]">
+      <div className="flex gap-12 flex-col md:flex-row justify-center bg-yellow-50 pb-[3%] pt-[5%]">
         {toys?.map((toy) => (
           <CategoryCard toy={toy} key={toy._id}></CategoryCard>
         ))}
