@@ -121,20 +121,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex-grow">
-          {user && (
-            <div
-              className="avatar tooltip tooltip-bottom mr-4"
-              data-tip={user?.displayName}
-            >
-              <div className="w-12 rounded-full">
-                <img src={user?.photoURL} />
-              </div>
-            </div>
-          )}
           {user?.email ? (
             <button
               onClick={handleLogOut}
-              className="md:flex items-center lg:gap-3 text-lg lg:text-xl font-semibold rounded bg-yellow-400 px-4 py-1 hover:bg-yellow-500"
+              className="md:flex items-center lg:gap-3 text-lg lg:text-xl font-semibold rounded bg-yellow-300 px-4 py-1 hover:bg-yellow-500"
             >
               Log Out <FaDoorOpen />
             </button>
@@ -145,6 +135,16 @@ const Navbar = () => {
             >
               Log In <HiOutlineKey></HiOutlineKey>
             </Link>
+          )}
+          {user && (
+            <div
+              className="avatar tooltip tooltip-bottom ml-4"
+              data-tip={user?.displayName}
+            >
+              <div className="w-12 rounded-full">
+                <img src={user?.photoURL} />
+              </div>
+            </div>
           )}
         </div>
       </div>
