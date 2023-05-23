@@ -12,6 +12,4 @@ Welcome to Toy Verse project. It's a market place project where people can do so
 
 ## Related
 
-Here are the Live Site Link
-
-[Visit Now](https://github.com/matiassingers/awesome-readme)
+Here is Live Site [https://toy-verse-c8022.web.app/](https://toy-verse-c8022.web.app/)
