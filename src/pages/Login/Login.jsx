@@ -3,9 +3,11 @@ import { FaGoogle } from "react-icons/fa";
 import loginImg from "../../assets/img/login-vector.jpg";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../titleHook/useTitle";
 
 const Login = () => {
   const { signIn, signInWithGoogle } = useContext(AuthContext);
+  useTitle("Login");
 
   const [error, setError] = useState("");
 

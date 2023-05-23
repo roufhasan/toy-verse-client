@@ -2,9 +2,11 @@ import { Link, useNavigate } from "react-router-dom";
 import signupImg from "../../assets/img/signup-vector.jpg";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../titleHook/useTitle";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  useTitle("Register");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 

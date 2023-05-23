@@ -1,8 +1,10 @@
+import useTitle from "../../titleHook/useTitle";
 import AllToysRow from "./AllToysRow";
 import { useLoaderData } from "react-router-dom";
 
 const AllToys = () => {
   const toys = useLoaderData();
+  useTitle("All Toys");
 
   return (
     <div className="mt-12">

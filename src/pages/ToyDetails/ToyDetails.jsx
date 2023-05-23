@@ -1,6 +1,7 @@
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { Link, useLoaderData } from "react-router-dom";
+import useTitle from "../../titleHook/useTitle";
 
 const ToyDetails = () => {
   const toy = useLoaderData();
@@ -14,6 +15,7 @@ const ToyDetails = () => {
     quantity,
     details,
   } = toy;
+  useTitle(`ToyDetai's - ${name}`);
 
   const ratingNum = Number(rating);
 
