@@ -65,6 +65,7 @@ const Login = () => {
                   type="email"
                   placeholder="Email"
                   name="email"
+                  required
                   className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded"
                 />
               </div>
@@ -76,6 +77,7 @@ const Login = () => {
                   type="password"
                   placeholder="Password"
                   name="password"
+                  required
                   className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded"
                 />
                 <label className="label">

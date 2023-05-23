@@ -1,10 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import signupImg from "../../assets/img/signup-vector.jpg";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSignUp = (event) => {
@@ -15,12 +16,18 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     const photoURL = form.photURL.value;
-    console.log(name, email, password, photoURL);
+
+    if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
+      setError(
+        "Password must be Minimum eight characters, at least one letter and one number"
+      );
+      return;
+    }
 
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        navigate("/login");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -44,7 +51,8 @@ const Register = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="name"
+                  placeholder="Name"
+                  required
                   className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded"
                 />
               </div>
@@ -56,6 +64,7 @@ const Register = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
+                  required
                   className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded"
                 />
               </div>
@@ -67,6 +76,7 @@ const Register = () => {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  required
                   className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded"
                 />
               </div>
@@ -78,6 +88,7 @@ const Register = () => {
                   type="url"
                   name="photURL"
                   placeholder="photoURL"
+                  required
                   className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded"
                 />
               </div>
@@ -89,7 +100,12 @@ const Register = () => {
                 />
               </div>
             </form>
-            <div className="divider mt-6">OR</div>
+            <div>
+              <p className="text-red-500 text-center">
+                <small>{error}</small>
+              </p>
+              <div className="divider mt-6">OR</div>
+            </div>
             <div className="text-center mt-4">
               <p>
                 Already have an accont?{" "}
