@@ -76,6 +76,7 @@ const AddToys = () => {
               defaultValue={user?.displayName}
               readOnly={user.displayName ? true : false}
               placeholder="Seller Name"
+              required
               className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded bg-yellow-100"
             />
           </div>
@@ -89,6 +90,7 @@ const AddToys = () => {
               defaultValue={user?.email}
               readOnly={user.email ? true : false}
               placeholder="Seller Email"
+              required
               className="pl-4 h-12 focus:outline-blue-500  border-gray-600 border rounded bg-yellow-100"
             />
           </div>
@@ -100,6 +102,7 @@ const AddToys = () => {
               type="url"
               name="photoURL"
               placeholder="Photo URL"
+              required
               className="pl-4 h-12 focus:outline-blue-500 focus:bg-blue-100  border-gray-600 border rounded"
             />
           </div>
@@ -111,6 +114,7 @@ const AddToys = () => {
               type="text"
               name="name"
               placeholder="Name"
+              required
               className="pl-4 h-12 focus:outline-blue-500 focus:bg-blue-100  border-gray-600 border rounded"
             />
           </div>
@@ -122,6 +126,7 @@ const AddToys = () => {
               type="text"
               name="price"
               placeholder="Price"
+              required
               className="pl-4 h-12 focus:outline-blue-500 focus:bg-blue-100  border-gray-600 border rounded"
             />
           </div>
@@ -133,6 +138,7 @@ const AddToys = () => {
             <input
               type="text"
               name="rating"
+              required
               placeholder="Rating"
               className="pl-4 h-12 focus:outline-blue-500 focus:bg-blue-100  border-gray-600 border rounded"
             />
@@ -145,6 +151,7 @@ const AddToys = () => {
               type="text"
               name="quantity"
               placeholder="Available quantity"
+              required
               className="pl-4 h-12 focus:outline-blue-500 focus:bg-blue-100  border-gray-600 border rounded"
             />
           </div>
@@ -167,6 +174,7 @@ const AddToys = () => {
             </label>
             <textarea
               name="details"
+              required
               className="textarea border border-gray-600 focus:outline-blue-500 focus:border-0 h-28"
               placeholder="Detail description"
             ></textarea>
