@@ -14,7 +14,7 @@ const AllToysRow = ({ toy, index }) => {
       <td>
         <Link
           to={`/toy/${_id}`}
-          className="btn bg-green-400 text-black hover:bg-green-600 hover:text-white border-0"
+          className="btn bg-[#27c8a4] hover:bg-[#21a588] hover:text-white border-0"
         >
           View Details{" "}
           <FaRegArrowAltCircleRight className="ml-2 text-xl"></FaRegArrowAltCircleRight>
